@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EfficientRabbit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EfficientRabbit</h1>
+        <p class="subheadline">Track and analyze your weekly productivity with ease.</p>
+
+    <div class="container">
+      <label for="training">Time spent training (hours:minutes):</label>
+      <input
+        type="number"
+        id="trainingHours"
+        placeholder="Hours"
+        min="0"
+        max="24"
+      />
+      <input
+        type="number"
+        id="trainingMinutes"
+        placeholder="Minutes"
+        min="0"
+        max="59"
+      />
+
+      <label for="sleep"
+        >Average sleep over the last 7 days (hours:minutes):</label
+      >
+      <input
+        type="number"
+        id="sleepHours"
+        placeholder="Hours"
+        min="0"
+        max="24"
+      />
+      <input
+        type="number"
+        id="sleepMinutes"
+        placeholder="Minutes"
+        min="0"
+        max="59"
+      />
+
+      <label for="work"
+        >Work done daily over the last 7 days (hours:minutes):</label
+      >
+      <input
+        type="number"
+        id="workHours"
+        placeholder="Hours"
+        min="0"
+        max="24"
+      />
+      <input
+        type="number"
+        id="workMinutes"
+        placeholder="Minutes"
+        min="0"
+        max="59"
+      />
+
+      <button onclick="calculatePercentages()">Calculate Percentages</button>
+
+      <div class="results">
+        <p id="trainingPercentage"></p>
+        <p id="sleepPercentage"></p>
+        <p id="workPercentage"></p>
+        <p id="totalProductive"></p>
+      </div>
+      <canvas id="activityChart" width="400" height="400"></canvas>
+
+<canvas id="activityChart" width="400" height="400"></canvas>
+
+<div class="legend">
+    <div class="legend-item">
+        <div class="legend-color" style="background-color: #A8E6CF;"></div> Sleep
+    </div>
+    <div class="legend-item">
+        <div class="legend-color" style="background-color: #AEDFF7;"></div> Training
+    </div>
+    <div class="legend-item">
+        <div class="legend-color" style="background-color: #FFA69E;"></div> Work
+    </div>
+    <div class="legend-item">
+        <div class="legend-color" style="background-color: #d3d3d3;"></div> Unused
+    </div>
+</div>
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
